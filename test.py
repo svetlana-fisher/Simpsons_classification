@@ -52,7 +52,7 @@ def show_predictions(image_paths, preds, labels_dict, num_images=8):
 model = SimpsonsNet().cuda()
 
 # train(model, train_loader, 55)
-model.load_state_dict(torch.load('best_norm.pth'))
+model.load_state_dict(torch.load('best_flip_n_turn.pth'))
 preds, paths = predict(model, test_loader)
 lables = extract_label_from_filename(paths)
 
